@@ -16,7 +16,7 @@ public class CalculadoraService {
 	private UriInfo context;
 
 	@GET
-	@Path("/add/{numeros:[0-9/]+}")
+	@Path("/add/{numeros:[\\-?0-9/]+}")
 	@Produces(MediaType.APPLICATION_JSON)
 	public String add(@PathParam("numeros") String numeros) {
 
@@ -48,7 +48,7 @@ public class CalculadoraService {
 	}
 
 	@GET
-	@Path("/subs/{numeros:[0-9/]+}")
+	@Path("/subs/{numeros:[\\-?0-9/]+}")
 	@Produces(MediaType.APPLICATION_JSON)
 	public String subs(@PathParam("numeros") String numeros) {
 
@@ -80,7 +80,7 @@ public class CalculadoraService {
 	}
 
 	@GET
-	@Path("/mult/{numeros:[0-9/]+}")
+	@Path("/mult/{numeros:[\\-?0-9/]+}")
 	@Produces(MediaType.APPLICATION_JSON)
 	public String mult(@PathParam("numeros") String numeros) {
 
@@ -113,7 +113,7 @@ public class CalculadoraService {
 	}
 
 	@GET
-	@Path("/div/{numeros:[0-9/]+}")
+	@Path("/div/{numeros:[\\-?0-9/]+}")
 	@Produces(MediaType.APPLICATION_JSON)
 	public String div(@PathParam("numeros") String numeros) {
 
